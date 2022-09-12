@@ -1,5 +1,5 @@
 import React,{useState} from "react";
-import Github from './Github'
+// import Github from './Github'
 import './Calculator.css'
 
 export default function Calculator(){
@@ -49,10 +49,12 @@ export default function Calculator(){
 
     return(
         <div className="calculator">
+
             <div className="visor">
-                <div className="acc">{acc}</div>
+                <div className="account">{acc}</div>
                 <div className="total">{total}</div>
             </div>
+
             <div className="container">
                 <input type="button" className="button action" value="C" onClick={() => setTotal('')}/>
                 <input type="button" className="button action" value="CE" onClick={() => ClearAll()}/>
@@ -73,7 +75,7 @@ export default function Calculator(){
                 <input type="button" className="button" value="." onClick={() => AddDot()}/>
                 <input type="button" className="button equal" value="=" onClick={() => Result()}/>
             </div>
-            <Github/>
+           
         </div>
     )
 }
